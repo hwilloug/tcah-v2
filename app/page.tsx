@@ -92,9 +92,9 @@ export default function Home() {
       </nav>
 
       <div className="grid grid-cols-3">
-        <Image className="w-full" src="https://tcah-v2-images.s3.us-east-1.amazonaws.com/2990412826_138783d52f_o.jpg" alt="Tega Cay Animal Hospital Hero Image" width={1000} height={1000} />
-        <Image className="w-full" src="https://tcah-v2-images.s3.us-east-1.amazonaws.com/4179781456_9fc221c32f_o.jpg" alt="Tega Cay Animal Hospital Hero Image" width={1000} height={1000} />
-        <Image className="w-full" src="https://tcah-v2-images.s3.us-east-1.amazonaws.com/6411073983_74549d959e_o.jpg" alt="Tega Cay Animal Hospital Hero Image" width={1000} height={1000} />
+        <Image className="w-full" src="https://tcah-v2-images.s3.us-east-1.amazonaws.com/2990412826_138783d52f_o.jpg" alt="Tega Cay Animal Hospital Hero Image" width={100} height={100} quality={75} />
+        <Image className="w-full" src="https://tcah-v2-images.s3.us-east-1.amazonaws.com/4179781456_9fc221c32f_o.jpg" alt="Tega Cay Animal Hospital Hero Image" width={100} height={100} quality={75} />
+        <Image className="w-full" src="https://tcah-v2-images.s3.us-east-1.amazonaws.com/6411073983_74549d959e_o.jpg" alt="Tega Cay Animal Hospital Hero Image" width={100} height={100} quality={75} />
       </div>
 
       <div className="w-full h-4 bg-primary" />
@@ -141,7 +141,7 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
               {services.map((service, index) => (
                 <Card key={index} className="hover:shadow-md hover:shadow-primary/20 transition-shadow rounded-md">
-                  <Image src={service.image} alt={service.title} className="w-full object-cover rounded-t-md" width={1000} height={1000} />
+                  <Image src={service.image} alt={service.title} className="w-full object-cover rounded-t-md" width={100} height={100} quality={75} />
                   <div className="w-full h-2 bg-primary" />
                   <h3 className="text-xl font-semibold m-6 mb-3">{service.title}</h3>
                   <p className="text-muted-foreground m-6">{service.description}</p>
@@ -164,8 +164,9 @@ export default function Home() {
                       src={member.image}
                       alt={member.name}
                       className="object-cover w-full h-[300px]"
-                      width={1000}
-                      height={1000}
+                      width={100}
+                      height={100}
+                      quality={75}
                     />
                   </div>
                   <div className="w-full h-2 bg-primary" />
