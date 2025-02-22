@@ -66,13 +66,13 @@ const team: TeamMember[] = [
     name: "Dr. Paul A. Willoughby, DMV",
     role: "Veterinarian and Surgeon",
     description: "With over 15 years of experience, Dr. Willoughby specializes in small animal medicine and surgery.",
-    image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=2070&auto=format&fit=crop"
+    image: "https://tcah-v2-images.s3.us-east-1.amazonaws.com/4179770592_d5d9c04fa3_o.jpg"
   },
   {
     name: "Whatser Face",
     role: "Veterinary Technician",
     description: "Dr. Chen is our surgical specialist with expertise in orthopedic and soft tissue procedures.",
-    image: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?q=80&w=2070&auto=format&fit=crop"
+    image: "https://tcah-v2-images.s3.us-east-1.amazonaws.com/4179770592_d5d9c04fa3_o.jpg"
   }
 ];
 
@@ -237,9 +237,9 @@ export default function Home() {
               key={index}
               src={imageUrl}
               alt="Tega Cay Animal Hospital Gallery Image"
-              width={1000}
-              height={1000}
-              quality={25}
+              width={100}
+              height={100}
+              quality={75}
               className="w-full"
             />
           ))}

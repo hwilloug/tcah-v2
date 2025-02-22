@@ -1,10 +1,16 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
   eslint: {
     ignoreDuringBuilds: true,
   },
-  images: { unoptimized: true },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'tcah-v2-images.s3.us-east-1.amazonaws.com',
+      },
+    ],
+  },
 };
 
 module.exports = nextConfig;
