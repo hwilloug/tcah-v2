@@ -76,3 +76,8 @@
     @apply bg-background text-foreground;
   }
 }
+
+h1, h2 {
+  font-family: var(--font-header);
+  letter-spacing: 0.03em;
+}
