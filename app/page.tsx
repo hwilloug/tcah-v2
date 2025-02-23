@@ -4,6 +4,7 @@ import { Calendar, Clock, Phone, MapPin, Heart, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import Image from 'next/image';
+import Link from 'next/link';
 
 interface InfoCardProps {
   icon: React.ReactNode;
@@ -34,7 +35,7 @@ const InfoCard: React.FC<InfoCardProps> = ({ icon, title, content }) => (
   </Card>
 );
 
-const Divider = () => (
+export const Divider = () => (
   <div className="w-16 h-1 bg-primary mx-auto mb-12" />
 );
 
@@ -78,30 +79,19 @@ const team: TeamMember[] = [
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-background">
-      {/* Navigation Bar */}
-      <nav className="bg-primary text-primary-foreground w-full z-50">
-        <div className="mx-6 p-4">
-          <div className="flex items-center h-16">
-            <div className="flex items-center gap-6">
-              <Image src="https://tcah-v2-images.s3.us-east-1.amazonaws.com/tcah-logo-white.svg" alt="Tega Cay Animal Hospital Logo" width={40} height={40} />
-              <h1 className="text-3xl font-bold">Tega Cay Animal Hospital</h1>
-            </div>
-          </div>
-        </div>
-      </nav>
-
-      <div className="grid grid-cols-3">
+    <main className="min-h-screen bg-background">  
+    
+    <div className="grid grid-cols-3">
         <Image className="w-full" src="https://tcah-v2-images.s3.us-east-1.amazonaws.com/2990412826_138783d52f_o.jpg" alt="Tega Cay Animal Hospital Hero Image" width={100} height={100} quality={75} />
-        <Image className="w-full" src="https://tcah-v2-images.s3.us-east-1.amazonaws.com/4179781456_9fc221c32f_o.jpg" alt="Tega Cay Animal Hospital Hero Image" width={100} height={100} quality={75} />
+        <Image className="w-full" src="https://tcah-v2-images.s3.us-east-1.amazonaws.com/4156769446_3f82ce8edd_o.jpg" alt="Tega Cay Animal Hospital Hero Image" width={100} height={100} quality={75} />
         <Image className="w-full" src="https://tcah-v2-images.s3.us-east-1.amazonaws.com/6411073983_74549d959e_o.jpg" alt="Tega Cay Animal Hospital Hero Image" width={100} height={100} quality={75} />
       </div>
 
-      <div className="w-full h-4 bg-primary" />
-
+      <div className="w-full h-2 bg-primary" />
       {/* Alert bar */}
-      <div className="bg-[#FFB81C] p-4 m-12 rounded-md">
-        <p className="text-center text-lg"><b>Temporary Hours:</b> Mon-Thurs: 7 AM - 12 PM, 1 PM - 6 PM; Fri: 7 AM - 12 PM</p>
+      <div className="bg-[#FFB81C] p-4 m-12 rounded-md text-center shadow-md">
+        <p className="text-center text-lg"><b>Temporary Hours:</b></p>
+        <p>Mon-Thurs: 7 AM - 12 PM, 1 PM - 6 PM</p><p>Fri: 7 AM - 12 PM</p>
       </div>
       {/* Main Content */}
       <div>
@@ -138,7 +128,7 @@ export default function Home() {
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold text-center mb-4 text-primary">Our Services</h2>
             <Divider />
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
               {services.map((service, index) => (
                 <Card key={index} className="hover:shadow-md hover:shadow-primary/20 transition-shadow rounded-md">
                   <Image src={service.image} alt={service.title} className="w-full object-cover rounded-t-md" width={100} height={100} quality={75} />
@@ -198,41 +188,7 @@ export default function Home() {
             "https://tcah-v2-images.s3.us-east-1.amazonaws.com/3126708576_1aeb933cab_o.jpg",
             "https://tcah-v2-images.s3.us-east-1.amazonaws.com/4154345122_0dd2b8ff0a_o.jpg",
             "https://tcah-v2-images.s3.us-east-1.amazonaws.com/4156769446_3f82ce8edd_o.jpg",
-            "https://tcah-v2-images.s3.us-east-1.amazonaws.com/4160854423_0f6625ca27_o.jpg",
-            "https://tcah-v2-images.s3.us-east-1.amazonaws.com/2959176293_dac11390e4_o.jpg",
-            "https://tcah-v2-images.s3.us-east-1.amazonaws.com/4154362210_93f67aab1e_o.jpg",
-            "https://tcah-v2-images.s3.us-east-1.amazonaws.com/4160922682_874f61dbc3_o.jpg",
-            "https://tcah-v2-images.s3.us-east-1.amazonaws.com/4164254544_e639b2fcd7_o.jpg",
-            "https://tcah-v2-images.s3.us-east-1.amazonaws.com/4167334845_4073a0b7f5_o.jpg",
-            "https://tcah-v2-images.s3.us-east-1.amazonaws.com/4167338743_3306a67a67_o.jpg",
-            "https://tcah-v2-images.s3.us-east-1.amazonaws.com/4167379259_0fccb5f4ee_o.jpg",
-            "https://tcah-v2-images.s3.us-east-1.amazonaws.com/4160922894_c220a46c44_o.jpg",
-            "https://tcah-v2-images.s3.us-east-1.amazonaws.com/5149270517_21bbd8cb71_o.jpg",
-            "https://tcah-v2-images.s3.us-east-1.amazonaws.com/4168100582_8fb64a7c8b_o.jpg",
-            "https://tcah-v2-images.s3.us-east-1.amazonaws.com/4168127918_f0b00b7951_o.jpg",
-            "https://tcah-v2-images.s3.us-east-1.amazonaws.com/4179004555_d75f6672b4_o.jpg",
-            "https://tcah-v2-images.s3.us-east-1.amazonaws.com/4179019159_68ffc1cb05_o.jpg",
-            "https://tcah-v2-images.s3.us-east-1.amazonaws.com/4179017449_0812658b86_o.jpg",
-            "https://tcah-v2-images.s3.us-east-1.amazonaws.com/4179020101_f5070cf846_o.jpg",
-            "https://tcah-v2-images.s3.us-east-1.amazonaws.com/4179764206_621953d41c_o.jpg",
-            "https://tcah-v2-images.s3.us-east-1.amazonaws.com/4179766410_5b7fe89b35_o.jpg",
-            "https://tcah-v2-images.s3.us-east-1.amazonaws.com/4179769294_5598c154cf_o.jpg",
-            "https://tcah-v2-images.s3.us-east-1.amazonaws.com/4179776462_ee383b2ea7_o.jpg",
-            "https://tcah-v2-images.s3.us-east-1.amazonaws.com/4179784274_b1305b6516_o.jpg",
-            "https://tcah-v2-images.s3.us-east-1.amazonaws.com/4179777290_84462eee93_o.jpg",
-            "https://tcah-v2-images.s3.us-east-1.amazonaws.com/4179781456_9fc221c32f_o.jpg",
-            "https://tcah-v2-images.s3.us-east-1.amazonaws.com/4200611652_c1c42218a9_o.jpg",
-            "https://tcah-v2-images.s3.us-east-1.amazonaws.com/4963623781_5dd6ae1f1a_o.jpg",
-            "https://tcah-v2-images.s3.us-east-1.amazonaws.com/4964224446_4e468503c4_o.jpg",
-            "https://tcah-v2-images.s3.us-east-1.amazonaws.com/5004809505_ed9e630b55_o.jpg",
-            "https://tcah-v2-images.s3.us-east-1.amazonaws.com/5005421938_d8cca30865_o.jpg",
-            "https://tcah-v2-images.s3.us-east-1.amazonaws.com/5172809794_f034df2918_o.jpg",
-            "https://tcah-v2-images.s3.us-east-1.amazonaws.com/6396960639_8bc3773c19_o.jpg",
-            "https://tcah-v2-images.s3.us-east-1.amazonaws.com/6405448953_610472021c_o.jpg",
-            "https://tcah-v2-images.s3.us-east-1.amazonaws.com/6411248101_cfe6569905_o.jpg",
-            "https://tcah-v2-images.s3.us-east-1.amazonaws.com/6415204765_3c90261f25_o.jpg",
-            "https://tcah-v2-images.s3.us-east-1.amazonaws.com/4179010913_f11f6df2ae_o.jpg",
-            "https://tcah-v2-images.s3.us-east-1.amazonaws.com/4179770592_d5d9c04fa3_o.jpg"
+            "https://tcah-v2-images.s3.us-east-1.amazonaws.com/4160854423_0f6625ca27_o.jpg"
           ].map((imageUrl, index) => (
             <Image 
               key={index}
@@ -244,6 +200,9 @@ export default function Home() {
               className="w-full"
             />
           ))}
+        </div>
+        <div className="flex justify-center">
+          <Link href="/gallery"><Button className="m-4">View More</Button></Link>
         </div>
       </section>
 
